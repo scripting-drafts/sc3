@@ -313,7 +313,7 @@ class OscUdpInterface(OscInterface):
             except OSError as e:
                 if self._running:
                     _logger.error(f'{str(self)}: {str(e)}')
-                break
+                # break
 
     def stop(self):
         if not self._running:

@@ -220,6 +220,14 @@ class LPF(Filter):
     def kr(cls, input=0.0, freq=440.0):
         return cls._multi_new('control', input, freq)
 
+class LPF18(Filter):
+    @classmethod
+    def ar(cls, input=0.0, freq=440.0, res=1.0, q=90.0):
+        return cls._multi_new('audio', input, freq, res, q)
+
+    @classmethod
+    def kr(cls, input=0.0, freq=440.0, res=1.0, q=90.0):
+        return cls._multi_new('control', input, freq, res, q)
 
 class HPF(LPF):
     pass

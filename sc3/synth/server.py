@@ -51,7 +51,7 @@ class Defaults(enum.Enum):
     ZEROCONF = ('-R', 1)  # RENDEZVOUS, boolean
 
     RESTRICTED_PATH = ('-P', None)  # opt str
-    UGEN_PLUGINS_PATH = ('-U', None)  # opt str
+    UGEN_PLUGINS_PATH = ('-U', os.environ.get('SCPLUGINSPATH'))  # opt str
 
     CONTROL_BUSES = ('-c', 16384)  # # opt int, num_control_bus_channels
     AUDIO_BUSES = ('-a', 1024)  # # opt int, num_audio_bus_channels
