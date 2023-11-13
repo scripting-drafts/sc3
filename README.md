@@ -59,19 +59,21 @@ More examples can be found as python notebooks in the following repo:
 Install
 -------
 
+Add SCPLUGINSPATH Environment Variable
+
 Depending on your operating system you may need to use `python3` and `pip3`
 commands instead of `python` and `pip`.
 
 From source using pip (recomended by now):
 
 ```bash
-pip install git+https://github.com/smrg-lm/sc3.git
+pip install git+https://github.com/scripting-drafts/sc3.git
 ```
 
 Or with optional MIDI support:
 
 ```bash
-pip install "sc3[midi] @ git+https://github.com/smrg-lm/sc3.git"
+pip install "sc3[midi] @ git+https://github.com/scripting-drafts/sc3.git"
 ```
 
 From source in develop mode (having a clone of this repo already):
@@ -84,13 +86,6 @@ For optional MIDI support also install mido and rtmidi backend:
 
 ```bash
 pip install mido python-rtmidi
-```
-
-From PyPI (usually outdated by now, there will be a more stable beta version soon):
-
-```bash
-pip install sc3  # [midi] or [midi-nrt] for MIDI support, the nrt variant
-                 # installs mido but not the driver.
 ```
 
 License
